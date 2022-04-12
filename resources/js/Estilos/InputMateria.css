@@ -1,0 +1,20 @@
+:root{
+    --color-principal:#4774C7;
+    --color-secundario: #A9BEE5;
+}
+
+.contenedor-input-materia{
+    display: flex;
+}
+
+.boton-agregar-materia{
+    background-color: var(--color-principal);
+    border: none;
+    height: 40px;
+    width: 80px;
+    border-radius: 16px;
+    color: white;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+    font-size: 16px;
+    margin: 5px;
+}

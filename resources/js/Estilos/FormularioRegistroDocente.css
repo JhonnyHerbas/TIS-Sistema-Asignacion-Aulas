@@ -1,0 +1,55 @@
+:root{
+    --color-principal:#4774C7;
+    --color-secundario: #A9BEE5;
+    --color-letra-secundaria: #74747B;
+}
+
+input{
+    border: none;
+    border: 1px solid var(--color-letra-secundaria);
+    height: 30px;
+    width: 80%;
+    border-radius: 16px;
+    margin: 6px;
+}
+label{
+    color:var(--color-letra-secundaria) ;
+    
+}
+input.check{
+   height: 20px !important;
+   width: 20px !important;
+   
+}
+.formulario{
+    margin: 10px 10%;
+    
+}
+.titulo-formulario{
+    color: var(--color-principal);
+}
+
+
+.contenedor-columnas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.columna{
+    padding: 10px;
+}
+
+
+
+
+.contendor-botones{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-check{
+    display: flex;
+}

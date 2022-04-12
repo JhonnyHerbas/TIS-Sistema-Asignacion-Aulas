@@ -1,0 +1,9 @@
+.contenedor-materia{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 16px;
+    height: 30px;
+    line-height: 10px;
+
+}
