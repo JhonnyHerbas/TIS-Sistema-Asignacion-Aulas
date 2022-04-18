@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//    return $request->user();
+//}); 
+
+Route::get('usuario','tutorialController@obtenerUsuarios');
+
+Route::get('/reserva/materia','tutorialController@obtenerMaterias');
+
+Route::get('grupo','tutorialController@obtenerGrupos');
+
+Route::post('/reserva/create','tutorialController@create');
