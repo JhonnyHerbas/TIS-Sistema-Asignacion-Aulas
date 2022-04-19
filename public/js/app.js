@@ -5284,10 +5284,10 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 //require('./components/Example');
-//require('./components/reserva/form');
 
 
-__webpack_require__(/*! ./components/reserva/grupos */ "./resources/js/components/reserva/grupos.js"); //require('./components/reserva/listaMateria');
+__webpack_require__(/*! ./components/reserva/form */ "./resources/js/components/reserva/form.js"); //require('./components/reserva/grupos');
+//require('./components/reserva/listaMateria');
 
 /***/ }),
 
@@ -5327,10 +5327,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/components/reserva/grupos.js":
-/*!***************************************************!*\
-  !*** ./resources/js/components/reserva/grupos.js ***!
-  \***************************************************/
+/***/ "./resources/js/components/reserva/form.js":
+/*!*************************************************!*\
+  !*** ./resources/js/components/reserva/form.js ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5368,70 +5368,30 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function Grupo() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
+function Form() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
-      fechaRegis = _useState2[0],
-      setFechaRegis = _useState2[1];
-
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
-      _useState4 = _slicedToArray(_useState3, 2),
-      horaIni = _useState4[0],
-      setHoraIni = _useState4[1];
-
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
-      _useState6 = _slicedToArray(_useState5, 2),
-      periodos = _useState6[0],
-      setPeriodo = _useState6[1];
-
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
-      _useState8 = _slicedToArray(_useState7, 2),
-      cantEstu = _useState8[0],
-      setCantidad = _useState8[1];
-
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
-      _useState10 = _slicedToArray(_useState9, 2),
-      estado = _useState10[0],
-      setEstado = _useState10[1];
-
-  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
-      _useState12 = _slicedToArray(_useState11, 2),
-      motivo = _useState12[0],
-      setMotivo = _useState12[1];
-
-  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
-      _useState14 = _slicedToArray(_useState13, 2),
-      dia = _useState14[0],
-      setDia = _useState14[1];
-
-  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
-      _useState16 = _slicedToArray(_useState15, 2),
-      horaFin = _useState16[0],
-      setHoraFin = _useState16[1];
-
-  var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
-      _useState18 = _slicedToArray(_useState17, 2),
-      listGrupo = _useState18[0],
-      setListGrupo = _useState18[1];
+      listMateria = _useState2[0],
+      setListMateria = _useState2[1];
 
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    function fetchDataGrupo() {
-      return _fetchDataGrupo.apply(this, arguments);
+    function fetchDataMateria() {
+      return _fetchDataMateria.apply(this, arguments);
     }
 
-    function _fetchDataGrupo() {
-      _fetchDataGrupo = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var res2;
+    function _fetchDataMateria() {
+      _fetchDataMateria = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        var res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return _services_Reserva__WEBPACK_IMPORTED_MODULE_3__["default"].listgru();
+                return _services_Reserva__WEBPACK_IMPORTED_MODULE_3__["default"].list();
 
               case 2:
-                res2 = _context.sent;
-                setListGrupo(res2.data);
+                res = _context.sent;
+                setListMateria(res.data);
 
               case 4:
               case "end":
@@ -5440,66 +5400,32 @@ function Grupo() {
           }
         }, _callee);
       }));
-      return _fetchDataGrupo.apply(this, arguments);
+      return _fetchDataMateria.apply(this, arguments);
     }
 
-    fetchDataGrupo();
+    fetchDataMateria();
   }, []);
-
-  var saveEmployee = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
-      var data, res;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
-        while (1) {
-          switch (_context2.prev = _context2.next) {
-            case 0:
-              data = {};
-              _context2.next = 3;
-              return _services_Reserva__WEBPACK_IMPORTED_MODULE_3__["default"].save(data);
-
-            case 3:
-              res = _context2.sent;
-
-              if (res.success) {
-                alert(res.message);
-              } else {
-                alert(res.message);
-              }
-
-            case 5:
-            case "end":
-              return _context2.stop();
-          }
-        }
-      }, _callee2);
-    }));
-
-    return function saveEmployee() {
-      return _ref.apply(this, arguments);
-    };
-  }();
-
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("select", {
       defaultValue: 'DEFAULT',
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
         value: 'DEFAULT',
         disabled: true,
-        children: "Choose a grupo ..."
-      }), listGrupo.map(function (item) {
+        children: "Choose a materia ..."
+      }), listMateria.map(function (item) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
-          value: item.Nume_G,
-          children: item.Nume_G
-        }, item.Nume_G);
+          value: item.SisM_M,
+          children: item.Nomb_M
+        }, item.SisM_M);
       })]
     })
   });
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Grupo);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Form);
 
 if (document.getElementById('example')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_2__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Grupo, {}), document.getElementById('example'));
+  react_dom__WEBPACK_IMPORTED_MODULE_2__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Form, {}), document.getElementById('example'));
 }
 
 /***/ }),

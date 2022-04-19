@@ -13,6 +13,6 @@ require('./bootstrap');
  */
 
 //require('./components/Example');
-//require('./components/reserva/form');
-require('./components/reserva/grupos');
+require('./components/reserva/form');
+//require('./components/reserva/grupos');
 //require('./components/reserva/listaMateria');
