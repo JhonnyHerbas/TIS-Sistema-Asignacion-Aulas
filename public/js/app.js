@@ -5327,6 +5327,16 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/components/SolicitarReserva.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/SolicitarReserva.js ***!
+  \*****************************************************/
+/***/ (() => {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\Jhon\\Documents\\GitHub\\TIS-Sistema-Asignacion-Aulas\\resources\\js\\components\\SolicitarReserva.js: Identifier 'React' has already been declared. (6:7)\n\n\u001b[0m \u001b[90m 4 |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m'bootstrap/dist/js/bootstrap.bundle'\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m'bootstrap/dist/css/bootstrap.min.css'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m \u001b[36mimport\u001b[39m \u001b[33mReact\u001b[39m\u001b[33m,\u001b[39m {useEffect\u001b[33m,\u001b[39m useState\u001b[33m,\u001b[39m \u001b[33mFragment\u001b[39m} \u001b[36mfrom\u001b[39m \u001b[32m'react'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m   |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 7 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 8 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m \u001b[36mclass\u001b[39m \u001b[33mSolicitarReserva\u001b[39m \u001b[36mextends\u001b[39m \u001b[33mComponent\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 9 |\u001b[39m     constructor(props) {\u001b[0m\n    at instantiate (C:\\Users\\Jhon\\Documents\\GitHub\\TIS-Sistema-Asignacion-Aulas\\node_modules\\@babel\\parser\\lib\\index.js:72:32)\n    at constructor (C:\\Users\\Jhon\\Documents\\GitHub\\TIS-Sistema-Asignacion-Aulas\\node_modules\\@babel\\parser\\lib\\index.js:358:12)\n    at Object.raise (C:\\Users\\Jhon\\Documents\\GitHub\\TIS-Sistema-Asignacion-Aulas\\node_modules\\@babel\\parser\\lib\\index.js:3335:19)\n    at ScopeHandler.checkRedeclarationInScope (C:\\Users\\Jhon\\Documents\\GitHub\\TIS-Sistema-Asignacion-Aulas\\node_modules\\@babel\\parser\\lib\\index.js:3519:19)\n    at ScopeHandler.declareName (C:\\Users\\Jhon\\Documents\\GitHub\\TIS-Sistema-Asignacion-Aulas\\node_modules\\@babel\\parser\\lib\\index.js:3485:12)\n    at Object.declareNameFromIdentifier (C:\\Users\\Jhon\\Documents\\GitHub\\TIS-Sistema-Asignacion-Aulas\\node_modules\\@babel\\parser\\lib\\index.js:12058:16)\n    at Object.checkIdentifier (C:\\Users\\Jhon\\Documents\\GitHub\\TIS-Sistema-Asignacion-Aulas\\node_modules\\@babel\\parser\\lib\\index.js:12053:12)\n    at Object.checkLVal (C:\\Users\\Jhon\\Documents\\GitHub\\TIS-Sistema-Asignacion-Aulas\\node_modules\\@babel\\parser\\lib\\index.js:11979:12)\n    at Object.finishImportSpecifier (C:\\Users\\Jhon\\Documents\\GitHub\\TIS-Sistema-Asignacion-Aulas\\node_modules\\@babel\\parser\\lib\\index.js:16191:10)\n    at Object.parseImportSpecifierLocal (C:\\Users\\Jhon\\Documents\\GitHub\\TIS-Sistema-Asignacion-Aulas\\node_modules\\@babel\\parser\\lib\\index.js:16187:31)");
+
+/***/ }),
+
 /***/ "./resources/js/components/reserva/form.js":
 /*!*************************************************!*\
   !*** ./resources/js/components/reserva/form.js ***!
@@ -5336,96 +5346,154 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* binding */ Form)
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _services_Reserva__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/Reserva */ "./resources/js/services/Reserva.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _services_Reserva__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/Reserva */ "./resources/js/services/Reserva.js");
+/* harmony import */ var _SolicitarReserva__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../SolicitarReserva */ "./resources/js/components/SolicitarReserva.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
-function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+//import React, {useEffect, useState, Fragment} from 'react';
 
 
 
 
 
 
+var Form = /*#__PURE__*/function (_Component) {
+  _inherits(Form, _Component);
 
-function Form() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
-      _useState2 = _slicedToArray(_useState, 2),
-      listMateria = _useState2[0],
-      setListMateria = _useState2[1];
+  var _super = _createSuper(Form);
 
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    function fetchDataMateria() {
-      return _fetchDataMateria.apply(this, arguments);
-    }
+  function Form(props) {
+    var _this;
 
-    function _fetchDataMateria() {
-      _fetchDataMateria = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+    _classCallCheck(this, Form);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      datos: _this.fetchDataMateria(),
+      numero: 0
+    };
+    return _this;
+  }
+
+  _createClass(Form, [{
+    key: "fetchDataMateria",
+    value: function () {
+      var _fetchDataMateria = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
         var res;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return _services_Reserva__WEBPACK_IMPORTED_MODULE_3__["default"].list();
+                return _services_Reserva__WEBPACK_IMPORTED_MODULE_2__["default"].list();
 
               case 2:
                 res = _context.sent;
-                setListMateria(res.data);
+                console.log("valores xd", res.data);
+                return _context.abrupt("return", res.data);
 
-              case 4:
+              case 5:
               case "end":
                 return _context.stop();
             }
           }
         }, _callee);
       }));
-      return _fetchDataMateria.apply(this, arguments);
+
+      function fetchDataMateria() {
+        return _fetchDataMateria.apply(this, arguments);
+      }
+
+      return fetchDataMateria;
+    }()
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_SolicitarReserva__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          listMateria: this.state.datos
+        })
+      });
     }
+  }]);
 
-    fetchDataMateria();
-  }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("select", {
-      defaultValue: 'DEFAULT',
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
-        value: 'DEFAULT',
-        disabled: true,
-        children: "Choose a materia ..."
-      }), listMateria.map(function (item) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
-          value: item.SisM_M,
-          children: item.Nomb_M
-        }, item.SisM_M);
-      })]
-    })
-  });
+  return Form;
+}(react__WEBPACK_IMPORTED_MODULE_4__.Component);
+/*
+function Form(){
+
+    const [listMateria , setListMateria] = useState([]);
+
+    useEffect(()=>{
+        async function fetchDataMateria(){
+            const res = await reservaServices.list();
+            console.log("valores xd", res);
+            setListMateria(res.data)
+        }
+        fetchDataMateria();
+    },[]);
+    return(
+        <div>
+            <SolicitarReserva listMateria = {listMateria}/>
+            {/*
+            <select defaultValue={'DEFAULT'}>
+                <option value={'DEFAULT'} disabled>Choose a materia ...</option>
+                {
+                    listMateria.map((item)=>{
+                        return(
+                            <option key={item.SisM_M} value={item.SisM_M} >{item.Nomb_M}</option>
+                        ) 
+                    })
+                }
+            </select>
+            */
+
+/*}*/
+
+/*</div>
+);
 }
+export default Form;
+*/
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Form);
+
+
 
 if (document.getElementById('example')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_2__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Form, {}), document.getElementById('example'));
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Form, {}), document.getElementById('example'));
 }
 
 /***/ }),
