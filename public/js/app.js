@@ -5327,39 +5327,404 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _FormularioRegistroDocente__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormularioRegistroDocente */ "./resources/js/components/FormularioRegistroDocente.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
 
 
 function Example() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    className: "container",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "row justify-content-center",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "col-md-8",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "card",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            className: "card-header",
-            children: "Inicio de sesion"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            className: "card-body",
-            children: "Ejemplo de prueba para iniciar sesion"
-          })]
-        })
-      })
-    })
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_FormularioRegistroDocente__WEBPACK_IMPORTED_MODULE_2__["default"], {})
   });
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Example);
 
 if (document.getElementById('example')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Example, {}), document.getElementById('example'));
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Example, {}), document.getElementById('example'));
 }
+
+/***/ }),
+
+/***/ "./resources/js/components/FormularioRegistroDocente.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/FormularioRegistroDocente.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _Estilos_FormularioRegistroDocente_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Estilos/FormularioRegistroDocente.css */ "./resources/js/Estilos/FormularioRegistroDocente.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var FormularioRegistroDocente = function FormularioRegistroDocente() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      errornombre = _useState2[0],
+      setErrornombre = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      errorapellido = _useState4[0],
+      setErrorapellido = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState6 = _slicedToArray(_useState5, 2),
+      errorcodigo = _useState6[0],
+      setErrorcodigo = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
+      _useState8 = _slicedToArray(_useState7, 2),
+      rolDocente = _useState8[0],
+      setRolDocente = _useState8[1];
+
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState10 = _slicedToArray(_useState9, 2),
+      nombre = _useState10[0],
+      setNombre = _useState10[1];
+
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState12 = _slicedToArray(_useState11, 2),
+      nombreEstilo = _useState12[0],
+      setNombreEstilo = _useState12[1];
+
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState14 = _slicedToArray(_useState13, 2),
+      apellido = _useState14[0],
+      setApellido = _useState14[1];
+
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState16 = _slicedToArray(_useState15, 2),
+      apellidoEstilo = _useState16[0],
+      setApellidoEstilo = _useState16[1];
+
+  var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState18 = _slicedToArray(_useState17, 2),
+      codigosis = _useState18[0],
+      setCodigosis = _useState18[1];
+
+  var _useState19 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState20 = _slicedToArray(_useState19, 2),
+      codigoEstilo = _useState20[0],
+      setCodigoEstilo = _useState20[1];
+
+  var _useState21 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState22 = _slicedToArray(_useState21, 2),
+      correo = _useState22[0],
+      setCorreo = _useState22[1];
+
+  var _useState23 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState24 = _slicedToArray(_useState23, 2),
+      contrasena = _useState24[0],
+      setContrasena = _useState24[1];
+
+  var objetoMaterias = [{
+    "id": "1",
+    "nombre": "Introduccion a la programacion",
+    "grupo": "2F"
+  }, {
+    "id": "2",
+    "nombre": "MAteria 2",
+    "grupo": "2F"
+  }, {
+    "id": "3",
+    "nombre": "materia 3",
+    "grupo": "2F"
+  }, {
+    "id": "4",
+    "nombre": "materia 4",
+    "grupo": "2F"
+  }, {
+    "id": "5",
+    "nombre": "materia 5",
+    "grupo": "2F"
+  }, {
+    "id": "6",
+    "nombre": "materia 6",
+    "grupo": "2F"
+  }, {
+    "id": "7",
+    "nombre": "materia 7",
+    "grupo": "2F"
+  }, {
+    "id": "8",
+    "nombre": "materia 8",
+    "grupo": "2F"
+  }, {
+    "id": "9",
+    "nombre": "materia 9",
+    "grupo": "2F"
+  }, {
+    "id": "10",
+    "nombre": "materia 10",
+    "grupo": "2F"
+  }];
+
+  var _useState25 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(new Array(objetoMaterias.length).fill(false)),
+      _useState26 = _slicedToArray(_useState25, 2),
+      materias = _useState26[0],
+      setMaterias = _useState26[1];
+
+  var _useState27 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState28 = _slicedToArray(_useState27, 2),
+      listamaterias = _useState28[0],
+      setListamaterias = _useState28[1];
+
+  var contarMaterias = function contarMaterias() {
+    for (var i = 0; i < objetoMaterias; i++) {
+      console.log("entro aqui");
+
+      if (materias[i] === true) {
+        setTotalMaterias(totalMaterias + 1);
+        console.log("Contando materias");
+      }
+    }
+  };
+
+  var enviarDocente = function enviarDocente(e) {
+    var docente = {
+      rolDocente: rolDocente,
+      nombreDocente: nombre,
+      apellidoDocente: apellido,
+      codigoDocente: codigosis,
+      correoDocente: correo,
+      contrasenaDocente: contrasena,
+      materias: listamaterias
+    }; // contarMaterias();
+
+    console.log(listamaterias.length);
+
+    if (errornombre === false && errorapellido == false && errorcodigo === false && listamaterias.length > 0) {
+      console.log("se envio sin errores");
+      e.target.reset();
+      setNombreEstilo('');
+      setApellidoEstilo('');
+      setCodigoEstilo('');
+      setListamaterias(new Array(objetoMaterias.length).fill(false));
+      console.log(docente);
+    } else {
+      console.log("se envio con errores");
+      console.log(docente);
+    }
+
+    e.preventDefault();
+  };
+
+  var manejoCheck = function manejoCheck(e) {
+    var materiasActualizadas = materias.map(function (item, index) {
+      return index === e ? !item : item;
+    });
+    setMaterias(materiasActualizadas);
+    var materiasNombres = [];
+
+    for (var x = 0; x < objetoMaterias.length; x++) {
+      if (materiasActualizadas[x] == true) {
+        materiasNombres.push(objetoMaterias[x].nombre);
+      }
+    }
+
+    setListamaterias(materiasNombres);
+  };
+
+  var manejoblurnombre = function manejoblurnombre(e) {
+    var regex = new RegExp("^[a-zA-Z ]+$");
+    var valido = regex.test(nombre);
+
+    if (valido === false) {
+      setNombreEstilo('error');
+      setErrornombre(true);
+    } else {
+      setNombreEstilo('');
+      setErrornombre(false);
+    }
+  };
+
+  var manejoblurapellido = function manejoblurapellido(e) {
+    var regex = new RegExp("^[a-zA-Z ]+$");
+    var valido = regex.test(apellido);
+
+    if (valido === false) {
+      setErrorapellido(true);
+      setApellidoEstilo('error');
+    } else {
+      setApellidoEstilo('');
+      setErrorapellido(false);
+    }
+  };
+
+  var manejoblurcodigo = function manejoblurcodigo(e) {
+    var regex = new RegExp("^[0-9+$]");
+    var valido = regex.test(codigosis);
+
+    if (valido === false) {
+      setErrorcodigo(true);
+      setCodigoEstilo('error');
+    } else {
+      setCodigoEstilo('');
+      setErrorcodigo(false);
+    }
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    className: "formulario-registro-docente",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
+      onSubmit: enviarDocente,
+      autoComplete: "on",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+        className: "titulo-formulario",
+        children: "Registro de Usuario"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "contenedor-columnas",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "columna columna1",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+            htmlFor: "",
+            children: "Rol(es)  permitidos :"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "contenedor-check",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+              htmlFor: "",
+              className: "check-titulo",
+              children: "Docente:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+              type: "checkbox",
+              className: "check",
+              checked: true
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+              htmlFor: "",
+              className: "check-titulo",
+              children: "Administrador:"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+              type: "checkbox",
+              className: "check",
+              disabled: true
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {})]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+            htmlFor: "",
+            children: "Nombre(s):"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+            className: "input ".concat(nombreEstilo),
+            type: "text",
+            onChange: function onChange(e) {
+              return setNombre(e.target.value);
+            },
+            maxLength: "40",
+            minLength: "3",
+            onBlur: manejoblurnombre,
+            required: true
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+            htmlFor: "",
+            children: "Apellido(s):"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+            className: "input ".concat(apellidoEstilo),
+            type: "text",
+            onChange: function onChange(e) {
+              return setApellido(e.target.value);
+            },
+            maxLength: "60",
+            minLength: "3",
+            onBlur: manejoblurapellido,
+            required: true
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+            htmlFor: "codigoSis",
+            children: "Codigo Sis:"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+            className: "input ".concat(codigoEstilo),
+            type: "text",
+            onChange: function onChange(e) {
+              return setCodigosis(e.target.value);
+            },
+            minLength: "9",
+            maxLength: "9",
+            onBlur: manejoblurcodigo,
+            required: true
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+            htmlFor: "correo",
+            children: "Correo Electronico:"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+            className: "input",
+            type: "email",
+            onChange: function onChange(e) {
+              return setCorreo(e.target.value);
+            },
+            required: true
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+            htmlFor: "contrasena",
+            children: "Contrase\xF1a: "
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+            className: "input input-contrasena",
+            type: "password",
+            onChange: function onChange(e) {
+              return setContrasena(e.target.value);
+            },
+            maxLength: "14",
+            minLength: "8",
+            required: true
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {})]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "columna columna2",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+            htmlFor: "",
+            className: "titulo-materias",
+            children: "Materias:"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "linea"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "contenedor-materias-todas",
+            children: objetoMaterias.map(function (materia, index) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                className: "contenedor-una-materia",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("label", {
+                  children: [materia.nombre, "  : Grupo : ", materia.grupo]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                  className: "".concat(materia.nombre, "-").concat(materia.grupo),
+                  type: "checkbox",
+                  name: materia.nombre,
+                  onChange: function onChange() {
+                    return manejoCheck(index);
+                  },
+                  checked: materias[index]
+                }, materia.id)]
+              }, materia.id);
+            })
+          })]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "contendor-botones",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+          className: "boton-submit",
+          type: "submit",
+          value: "submit",
+          children: "Agregar Docente"
+        })
+      })]
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FormularioRegistroDocente);
 
 /***/ }),
 
@@ -10387,6 +10752,106 @@ defineJQueryPlugin(Toast);
 
 //# sourceMappingURL=bootstrap.esm.js.map
 
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Estilos/FormularioRegistroDocente.css":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Estilos/FormularioRegistroDocente.css ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ":root{\r\n    --color-principal:#4774C7;\r\n    --color-secundario: #A9BEE5;\r\n    --color-letra-secundaria: #74747B;\r\n}\r\n\r\n.formulario-registro-docente{\r\n    box-sizing: border-box;\r\n    margin: 5% 10%;\r\n    font-family:Roboto ,Arial  ;\r\n}\r\n.titulo-formulario{\r\n    color: var(--color-principal);\r\n   \r\n}\r\n.contenedor-columnas{\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr;\r\n}\r\n.columna{\r\n    padding: 10px;\r\n}\r\n\r\n/* ------------------------------------- */\r\n/* Inputs y labels del formulario */\r\n/* ------------------------------------- */\r\n.formulario-registro-docente label{\r\n    color:var(--color-letra-secundaria) ;\r\n    \r\n} \r\n.input{\r\n    border: none;\r\n    border: 1px solid var(--color-letra-secundaria);\r\n    height: 30px;\r\n    width: 80%;\r\n    border-radius: 16px;\r\n    margin: 9px;\r\n    padding: 3px 10px;\r\n    outline: none;\r\n}\r\n.input-contrasena{\r\n    width: 50%;\r\n}\r\n\r\n\r\n/* ---------------------------------------- */\r\n/* Contendor de los Checkbox */\r\n/* ---------------------------------------- */\r\n.check{\r\n  height: 20px;\r\n  width: 20px;\r\n  border-radius: 20px;\r\n\r\n   \r\n}\r\n.check-titulo{\r\n    padding: 5px 10px;\r\n}\r\n\r\n.contenedor-check{\r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    padding: 5px;\r\n}\r\n\r\n/* -------------------------------------------- */\r\n.linea{\r\n    width: 80%;\r\n    margin: 20px;\r\n    border-bottom: 0.3px solid rgb(226, 223, 223);\r\n}\r\n.contendor-botones{\r\n    display: flex;\r\n    padding: 10px;\r\n    margin: 10px;\r\n    text-align: center;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n.boton-submit{\r\n    background-color: var(--color-principal);\r\n    border: none;\r\n    height: 40px;\r\n    width: 280px;\r\n    border-radius: 16px;\r\n    color: white;\r\n    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);\r\n    font-size: 16px;\r\n    margin: 5px;\r\n}\r\n/* ------------------------------- */\r\n/* Contendor de las materias */\r\n/* ------------------------------- */\r\n.contenedor-materias-todas{\r\n  overflow-y: scroll;\r\n  max-height: 270px;\r\n}\r\n.contenedor-una-materia{\r\n   display: flex;\r\n    justify-content: space-between;\r\n    border-bottom: 0.5px dotted rgb(231, 226, 226);\r\n    padding: 4px 10px 4px 4px ;\r\n    \r\n}\r\n\r\n\r\n\r\n/* ----------------------------- */\r\n/* Responsive  */\r\n/* ------------------------------ */\r\n@media only screen and (max-width: 768px){\r\n    \r\n    .contenedor-columnas{\r\n       \r\n        display: block;\r\n       \r\n    }\r\n   \r\n    .titulo-formulario{\r\n        color: var(--color-principal);\r\n    }\r\n    .input{\r\n        border: none;\r\n        border: 1px solid var(--color-letra-secundaria);\r\n        height: 30px;\r\n        width: 80%;\r\n        border-radius: 16px;\r\n        margin: 9px;\r\n        padding: 3px 10px;\r\n        outline: none;\r\n    }\r\n\r\n    .formulario-registro-docente label{\r\n        color:var(--color-letra-secundaria) ;\r\n        \r\n    }\r\n\r\n    /* ---------------------------------------- */\r\n    /* Contendor de los Checkbox */\r\n    /* ---------------------------------------- */\r\n    .check{\r\n        height: 20px;\r\n        width: 20px;\r\n        border-radius: 20px;\r\n\r\n    \r\n    }\r\n    .check-titulo{\r\n        padding: 5px 10px;\r\n    }\r\n\r\n    .contenedor-check{\r\n        display: flex;\r\n        justify-content: space-evenly;\r\n        padding: 5px;\r\n    }\r\n\r\n    /* -------------------------------------------- */\r\n    .linea{\r\n        width: 100%;\r\n        margin: 20px;\r\n        border-bottom: 0.3px solid rgb(226, 223, 223);\r\n    }\r\n    .contendor-botones{\r\n        display: flex;\r\n        padding: 10px;\r\n        margin: 10px;\r\n        text-align: center;\r\n        align-items: center;\r\n        justify-content: center;\r\n    }\r\n\r\n}\r\n\r\n\r\n.error{\r\n    border: 1px solid red;\r\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+// eslint-disable-next-line func-names
+module.exports = function (cssWithMappingToString) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item);
+
+      if (item[2]) {
+        return "@media ".concat(item[2], " {").concat(content, "}");
+      }
+
+      return content;
+    }).join("");
+  }; // import a list of modules into the list
+  // eslint-disable-next-line func-names
+
+
+  list.i = function (modules, mediaQuery, dedupe) {
+    if (typeof modules === "string") {
+      // eslint-disable-next-line no-param-reassign
+      modules = [[null, modules, ""]];
+    }
+
+    var alreadyImportedModules = {};
+
+    if (dedupe) {
+      for (var i = 0; i < this.length; i++) {
+        // eslint-disable-next-line prefer-destructuring
+        var id = this[i][0];
+
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+
+    for (var _i = 0; _i < modules.length; _i++) {
+      var item = [].concat(modules[_i]);
+
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        // eslint-disable-next-line no-continue
+        continue;
+      }
+
+      if (mediaQuery) {
+        if (!item[2]) {
+          item[2] = mediaQuery;
+        } else {
+          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+        }
+      }
+
+      list.push(item);
+    }
+  };
+
+  return list;
+};
 
 /***/ }),
 
@@ -58877,6 +59342,315 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./resources/js/Estilos/FormularioRegistroDocente.css":
+/*!************************************************************!*\
+  !*** ./resources/js/Estilos/FormularioRegistroDocente.css ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_FormularioRegistroDocente_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./FormularioRegistroDocente.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/Estilos/FormularioRegistroDocente.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_FormularioRegistroDocente_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_FormularioRegistroDocente_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var isOldIE = function isOldIE() {
+  var memo;
+  return function memorize() {
+    if (typeof memo === 'undefined') {
+      // Test for IE <= 9 as proposed by Browserhacks
+      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+      // Tests for existence of standard globals is to allow style-loader
+      // to operate correctly into non-standard environments
+      // @see https://github.com/webpack-contrib/style-loader/issues/177
+      memo = Boolean(window && document && document.all && !window.atob);
+    }
+
+    return memo;
+  };
+}();
+
+var getTarget = function getTarget() {
+  var memo = {};
+  return function memorize(target) {
+    if (typeof memo[target] === 'undefined') {
+      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
+
+      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+        try {
+          // This will throw an exception if access to iframe is blocked
+          // due to cross-origin restrictions
+          styleTarget = styleTarget.contentDocument.head;
+        } catch (e) {
+          // istanbul ignore next
+          styleTarget = null;
+        }
+      }
+
+      memo[target] = styleTarget;
+    }
+
+    return memo[target];
+  };
+}();
+
+var stylesInDom = [];
+
+function getIndexByIdentifier(identifier) {
+  var result = -1;
+
+  for (var i = 0; i < stylesInDom.length; i++) {
+    if (stylesInDom[i].identifier === identifier) {
+      result = i;
+      break;
+    }
+  }
+
+  return result;
+}
+
+function modulesToDom(list, options) {
+  var idCountMap = {};
+  var identifiers = [];
+
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var count = idCountMap[id] || 0;
+    var identifier = "".concat(id, " ").concat(count);
+    idCountMap[id] = count + 1;
+    var index = getIndexByIdentifier(identifier);
+    var obj = {
+      css: item[1],
+      media: item[2],
+      sourceMap: item[3]
+    };
+
+    if (index !== -1) {
+      stylesInDom[index].references++;
+      stylesInDom[index].updater(obj);
+    } else {
+      stylesInDom.push({
+        identifier: identifier,
+        updater: addStyle(obj, options),
+        references: 1
+      });
+    }
+
+    identifiers.push(identifier);
+  }
+
+  return identifiers;
+}
+
+function insertStyleElement(options) {
+  var style = document.createElement('style');
+  var attributes = options.attributes || {};
+
+  if (typeof attributes.nonce === 'undefined') {
+    var nonce =  true ? __webpack_require__.nc : 0;
+
+    if (nonce) {
+      attributes.nonce = nonce;
+    }
+  }
+
+  Object.keys(attributes).forEach(function (key) {
+    style.setAttribute(key, attributes[key]);
+  });
+
+  if (typeof options.insert === 'function') {
+    options.insert(style);
+  } else {
+    var target = getTarget(options.insert || 'head');
+
+    if (!target) {
+      throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+    }
+
+    target.appendChild(style);
+  }
+
+  return style;
+}
+
+function removeStyleElement(style) {
+  // istanbul ignore if
+  if (style.parentNode === null) {
+    return false;
+  }
+
+  style.parentNode.removeChild(style);
+}
+/* istanbul ignore next  */
+
+
+var replaceText = function replaceText() {
+  var textStore = [];
+  return function replace(index, replacement) {
+    textStore[index] = replacement;
+    return textStore.filter(Boolean).join('\n');
+  };
+}();
+
+function applyToSingletonTag(style, index, remove, obj) {
+  var css = remove ? '' : obj.media ? "@media ".concat(obj.media, " {").concat(obj.css, "}") : obj.css; // For old IE
+
+  /* istanbul ignore if  */
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = replaceText(index, css);
+  } else {
+    var cssNode = document.createTextNode(css);
+    var childNodes = style.childNodes;
+
+    if (childNodes[index]) {
+      style.removeChild(childNodes[index]);
+    }
+
+    if (childNodes.length) {
+      style.insertBefore(cssNode, childNodes[index]);
+    } else {
+      style.appendChild(cssNode);
+    }
+  }
+}
+
+function applyToTag(style, options, obj) {
+  var css = obj.css;
+  var media = obj.media;
+  var sourceMap = obj.sourceMap;
+
+  if (media) {
+    style.setAttribute('media', media);
+  } else {
+    style.removeAttribute('media');
+  }
+
+  if (sourceMap && typeof btoa !== 'undefined') {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  } // For old IE
+
+  /* istanbul ignore if  */
+
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    while (style.firstChild) {
+      style.removeChild(style.firstChild);
+    }
+
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var singleton = null;
+var singletonCounter = 0;
+
+function addStyle(obj, options) {
+  var style;
+  var update;
+  var remove;
+
+  if (options.singleton) {
+    var styleIndex = singletonCounter++;
+    style = singleton || (singleton = insertStyleElement(options));
+    update = applyToSingletonTag.bind(null, style, styleIndex, false);
+    remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+  } else {
+    style = insertStyleElement(options);
+    update = applyToTag.bind(null, style, options);
+
+    remove = function remove() {
+      removeStyleElement(style);
+    };
+  }
+
+  update(obj);
+  return function updateStyle(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
+        return;
+      }
+
+      update(obj = newObj);
+    } else {
+      remove();
+    }
+  };
+}
+
+module.exports = function (list, options) {
+  options = options || {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+  // tags it will allow on a page
+
+  if (!options.singleton && typeof options.singleton !== 'boolean') {
+    options.singleton = isOldIE();
+  }
+
+  list = list || [];
+  var lastIdentifiers = modulesToDom(list, options);
+  return function update(newList) {
+    newList = newList || [];
+
+    if (Object.prototype.toString.call(newList) !== '[object Array]') {
+      return;
+    }
+
+    for (var i = 0; i < lastIdentifiers.length; i++) {
+      var identifier = lastIdentifiers[i];
+      var index = getIndexByIdentifier(identifier);
+      stylesInDom[index].references--;
+    }
+
+    var newLastIdentifiers = modulesToDom(newList, options);
+
+    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
+      var _identifier = lastIdentifiers[_i];
+
+      var _index = getIndexByIdentifier(_identifier);
+
+      if (stylesInDom[_index].references === 0) {
+        stylesInDom[_index].updater();
+
+        stylesInDom.splice(_index, 1);
+      }
+    }
+
+    lastIdentifiers = newLastIdentifiers;
+  };
+};
+
+/***/ }),
+
 /***/ "./node_modules/axios/package.json":
 /*!*****************************************!*\
   !*** ./node_modules/axios/package.json ***!
@@ -58950,6 +59724,18 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	

@@ -1,20 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import FormularioRegistroDocente from './FormularioRegistroDocente';
 
 function Example() {
-    return (
-        <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-md-8">
-                    <div className="card">
-                        <div className="card-header">Inicio de sesion</div>
+    return ( <div>
 
-                        <div className="card-body">Ejemplo de prueba para iniciar sesion</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+        <FormularioRegistroDocente/>
+
+      </div>);
 }
 
 export default Example;

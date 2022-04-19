@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/Prueba', function () {
+    return view('Prueba.prueba');
+});
+Route::get('Prueba/prueba',[UsuarioController::class,'create']);
+
+Route::resource('Prueba', UsuarioController::class);
