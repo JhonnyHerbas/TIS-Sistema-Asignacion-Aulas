@@ -22,6 +22,8 @@ Route::get('usuario','tutorialController@obtenerUsuarios');
 
 Route::get('/reserva/materia','tutorialController@obtenerMaterias');
 
-Route::get('grupo','tutorialController@obtenerGrupos');
+Route::get('/reserva/grupos/{id}','tutorialController@getGrupoMateria');
+
+Route::get('/reserva/grupo/{id}','tutorialController@obtenerGrupos');
 
 Route::post('/reserva/create','tutorialController@create');

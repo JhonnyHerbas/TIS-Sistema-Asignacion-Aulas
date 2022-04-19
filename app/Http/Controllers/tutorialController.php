@@ -39,6 +39,20 @@ class tutorialController extends Controller
         return response()->json($respuesta);
         //return Usuario::all();
     }
+
+    public function getGrupoMateria($id){
+        $data = \DB::table('grupo')
+        ->join('materia', 'SisM_UM', '=', 'SisM_M')
+        ->select('grupo.Nume_G', 'grupo.Nomb_M')
+        ->where('Id_U_G', '=', $id)
+        ->get();
+
+        $response['data']=$data;
+        $response['success']=true;
+
+        return $response;
+    }
+
     public function obtenerMaterias(){
         $data = \DB::table('materia')
         ->join('usuario_materia', 'SisM_UM', '=', 'SisM_M')
@@ -52,20 +66,30 @@ class tutorialController extends Controller
 
         return $response;
     }
-    public function obtenerGrupos(){
-        /*
-        select Nume_G
-        from grupo where SisM_M_G = "2006018" and Id_U_G = "doc0211";
-        */
+    public function obtenerGrupos($id){
         $data = \DB::table('grupo')
-        ->select('grupo.Nume_G')
-        ->where('Id_U_G', '=', 'doc0211')
-        ->where('SisM_M_G', '=', '2006018')
+        ->join('materia', 'SisM_M', '=', 'SisM_M_G')
+        ->select('Nume_G', 'Nomb_M')
+        ->where('Id_U_G', '=', $id)
         ->get();
 
         $response['data']=$data;
         $response['success']=true;
 
+        return $response;
+        /*
+        select Nume_G
+        from grupo where SisM_M_G = "2006018" and Id_U_G = "doc0211";
+        
+        $data = \DB::table('grupo')
+        ->select('grupo.Nume_G')
+        ->where('Id_U_G', '=', $id)
+        ->where('SisM_M_G', '=', '2006018')
+        ->get();
+
+        $response['data']=$data;
+        $response['success']=true;
+        */
         return $response;
     }
 }
