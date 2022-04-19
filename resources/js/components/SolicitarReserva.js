@@ -3,24 +3,14 @@ import Menu from './Menu'
 import DatosApp from '../utilidades/DatosApp';
 import 'bootstrap/dist/js/bootstrap.bundle'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useEffect, useState, Fragment } from 'react';
-
+import reservaServices from "../services/Reserva"
 export default class SolicitarReserva extends Component {
     constructor(props) {
         super(props);
-        const [listMateria, setListMateria] = useState([]);
-
-        useEffect(() => {
-            async function fetchDataMateria() {
-                const res = await reservaServices.list();
-                console.log("valores xd", res);
-                setListMateria(res.data)
-            }
-            fetchDataMateria();
-        }, []);
-
-        this.matDocente = DatosApp.getDatosMateria();
-        console.log("recupmat", this.props.listMateria);
+        this.matDocente = this.fetchDataMateria();
+        console.log("rec", this.matDocente)
+        //DatosApp.getDatosMateria();
+        //console.log("recupmat", this.props.listMateria);
         this.horarios = DatosApp.getHorarios();
         this.state = {
             materia: this.matDocente[0],
@@ -30,6 +20,13 @@ export default class SolicitarReserva extends Component {
             periodos: 1
         }
     }
+
+    async fetchDataMateria(){
+        const res = await reservaServices.list();
+        console.log("valores", res.data);
+        return res.data;
+    }
+
     render() {
         return (
             <div>
@@ -38,7 +35,7 @@ export default class SolicitarReserva extends Component {
                     <div className="mb-3">
                         <label className="form-label">Materia</label>
                         <select className="form-select" aria-label="Default select example">
-                            {this.listMateria.map((e, indice) =>
+                            {this.matDocente.map((e, indice) =>
                                 <option key={indice} onClick={() => this.setState({ materia: this.matDocente[indice] })}>{e}</option>
                             )}
                         </select>
