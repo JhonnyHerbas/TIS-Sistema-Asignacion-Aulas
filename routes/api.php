@@ -22,7 +22,7 @@ Route::get('usuario','tutorialController@obtenerUsuarios');
 
 Route::get('/reserva/materia','tutorialController@obtenerMaterias');
 
-Route::get('/reserva/grupos/{id}','tutorialController@getGrupoMateria');
+//Route::get('/reserva/grupos/{id}','tutorialController@getGrupoMateria');
 
 Route::get('/reserva/grupo/{id}','tutorialController@obtenerGrupos');
 

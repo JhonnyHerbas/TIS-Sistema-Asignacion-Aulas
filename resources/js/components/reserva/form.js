@@ -36,8 +36,8 @@ function Form() {
 
     useEffect(() => {
         async function fetchDataMateria() {
-            const res = await reservaServices.list();
-            console.log("valores xd", res);
+            const res = await reservaServices.listgru("/doc0214");
+            //console.log("valores xd", res);
             setListMateria(res.data)
         }
         fetchDataMateria();
@@ -50,7 +50,7 @@ function Form() {
                     <label className="form-label">Materia</label>
                     <select className="form-select" aria-label="Default select example">
                         {listMateria.map((e, indice) =>
-                            <option key={indice}>{e.Nomb_M}</option>
+                            <option key={indice}>{e.Nume_G} - {e.Nomb_M}</option>
                         )}
                     </select>
                 </div>

@@ -5504,14 +5504,14 @@ function Form() {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return _services_Reserva__WEBPACK_IMPORTED_MODULE_3__["default"].list();
+                return _services_Reserva__WEBPACK_IMPORTED_MODULE_3__["default"].listgru("/doc0214");
 
               case 2:
                 res = _context.sent;
-                console.log("valores xd", res);
+                //console.log("valores xd", res);
                 setListMateria(res.data);
 
-              case 5:
+              case 4:
               case "end":
                 return _context.stop();
             }
@@ -5534,8 +5534,8 @@ function Form() {
           className: "form-select",
           "aria-label": "Default select example",
           children: listMateria.map(function (e, indice) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("option", {
-              children: e.Nomb_M
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("option", {
+              children: [e.Nume_G, " - ", e.Nomb_M]
             }, indice);
           })
         })]
