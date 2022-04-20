@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsuarioMateriaTable extends Migration
+class CreateGrupoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateUsuarioMateriaTable extends Migration
      */
     public function up()
     {
-        Schema::create('usuario_materia', function (Blueprint $table) {
-            $table->integer('SisM_UM');
-            $table->string('Id_U_UM', 10)->index('fk_Materia_has_Usuario_Usuario1');
-
-            $table->primary(['SisM_UM', 'Id_U_UM']);
+        Schema::create('grupo', function (Blueprint $table) {
+            $table->string('Nume_G', 3);
+            $table->integer('NumeEstuResg_G');
+            $table->integer('SisM_M_G')->index('fk_Grupo_Materia');
+            $table->integer('Id_U_G')->index('fk_grupo_usuario1');
         });
     }
 
@@ -28,6 +28,6 @@ class CreateUsuarioMateriaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usuario_materia');
+        Schema::dropIfExists('grupo');
     }
 }

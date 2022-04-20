@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Class UsuarioSolicitud
  * 
- * @property string $Id_U_US
+ * @property int $Id_U_US
  * @property int $Id_SR_US
  * 
  * @property SolicitudReserva $solicitud_reserva
@@ -26,6 +26,7 @@ class UsuarioSolicitud extends Model
 	public $timestamps = false;
 
 	protected $casts = [
+		'Id_U_US' => 'int',
 		'Id_SR_US' => 'int'
 	];
 

@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $Id_N
  * @property string $Titu_N
  * @property int $Leid_N
- * @property string $Id_U_N
+ * @property int $Id_U_N
  * @property int $Id_RR_N
  * 
  * @property ReporteReserva $reporte_reserva
@@ -32,6 +32,7 @@ class Notificacion extends Model
 	protected $casts = [
 		'Id_N' => 'int',
 		'Leid_N' => 'int',
+		'Id_U_N' => 'int',
 		'Id_RR_N' => 'int'
 	];
 

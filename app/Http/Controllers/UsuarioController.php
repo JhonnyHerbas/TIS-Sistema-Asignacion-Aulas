@@ -17,55 +17,35 @@ class UsuarioController extends Controller{
     }
 
     public function store(Request $request){
-        /*$valida = $request->validate([
-            'nombres' => 'required|min:3|max:40|alpha',
-            'apellidoP' => 'required|min:3|max:60|alpha',
-            'correo' => 'required|max:60|min:3|email',
-            'contrasenia' => 'required|max:14|min:1'
-        ]);
 
-        $datosUsuario = request()->except('_token');
-        $datosUsuario = request()->all();
-        $usuario = new Usuario();
-        $usuario->Id_U='doc0200';
-        $usuario->Nomb_U=$request->nombres;
-        $usuario->Corr_U=$request->contrasenia;
-        $usuario->Cont_U=$request->correo;
-        $usuario->ApelPate_U=$request->apellidoP;
-        $usuario->ApelMate_U=$request->apellidoM;
-        if($request->docente == 'on'){
-            $usuario->Rol_U=1;
-        }
-        if ($request->admin == 'on') {
-            $usuario->Rol_U=2;
-        }
-        $usuario->save();
-        return response()->json($datosUsuario);
-        */
         try{
             $valida = $request->validate([
                 'nombres' => 'required|min:3|max:40|alpha',
                 'apellidoP' => 'required|min:3|max:60|alpha',
                 'correo' => 'required|max:60|min:3|email',
-                'contrasenia' => 'required|max:14|min:1'
+                'contrasenia' => 'required|max:14|min:1',
+                'codsis' => 'required|numeric|unique:Usuario,Id_U'
             ]);
-            $insert['Id_U']=$request['codSis'];
-            $insert['Nomb_U']=$request['nombre'];
-            $insert['Cont_U']=$request['contrasenia'];
-            $insert['Corr_U']=$request['correo'];
-            $insert['ApelPate_U']=$request['apellidoP'];
-            $insert['ApelMate_U']=$request['apellidoM'];
+
+            $datosUsuario = request()->except('_token');
+            $datosUsuario = request()->all();
+            $usuario = new Usuario();
+            $usuario->Id_U=$request->codsis;
+            $usuario->Nomb_U=strtoupper($request->nombres);
+            $usuario->Corr_U=$request->correo;
+            $usuario->Cont_U=$request->contrasenia;
+            $usuario->ApelPate_U=strtoupper($request->apellidoP);
+            $usuario->ApelMate_U=strtoupper($request->apellidoM);
             if($request->docente == 'on'){
-                $insert['Rol_U']=1;
+                $usuario->Rol_U=1;
             }
             if ($request->admin == 'on') {
-                $insert['Rol_U']=2;
+                $usuario->Rol_U=2;
             }
-            $response['message']="Save succesful";
-            $response['succes']=true;
-        }catch(\Exception $e) {
-            $response['message'] = $e->getMessage();
-            $response['succes'] = true;
+            $usuario->save();
+            return response("Registrado exitosamente");
+        }catch(Execption $e){
+            return response($e->getMessage());
         }
     }
 

@@ -14,7 +14,7 @@ class CreateUsuarioSolicitudTable extends Migration
     public function up()
     {
         Schema::create('usuario_solicitud', function (Blueprint $table) {
-            $table->string('Id_U_US', 10);
+            $table->integer('Id_U_US');
             $table->integer('Id_SR_US')->index('fk_Usuario_has_Solicitud_Reserva_Solicitud_Reserva1');
 
             $table->primary(['Id_U_US', 'Id_SR_US']);

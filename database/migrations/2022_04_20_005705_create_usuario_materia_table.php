@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsuarioReporteTable extends Migration
+class CreateUsuarioMateriaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateUsuarioReporteTable extends Migration
      */
     public function up()
     {
-        Schema::create('usuario_reporte', function (Blueprint $table) {
-            $table->string('Id_U_UR', 10);
-            $table->integer('Id_RR_UR')->index('fk_Usuario_has_Reporte_Reserva_Reporte_Reserva1');
+        Schema::create('usuario_materia', function (Blueprint $table) {
+            $table->integer('SisM_UM');
+            $table->integer('Id_U_UM')->index('fk_Materia_has_Usuario_Usuario1');
 
-            $table->primary(['Id_U_UR', 'Id_RR_UR']);
+            $table->primary(['SisM_UM', 'Id_U_UM']);
         });
     }
 
@@ -28,6 +28,6 @@ class CreateUsuarioReporteTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usuario_reporte');
+        Schema::dropIfExists('usuario_materia');
     }
 }

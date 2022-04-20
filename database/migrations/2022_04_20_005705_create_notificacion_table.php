@@ -17,7 +17,7 @@ class CreateNotificacionTable extends Migration
             $table->integer('Id_N')->primary();
             $table->string('Titu_N', 20);
             $table->tinyInteger('Leid_N');
-            $table->string('Id_U_N', 10)->index('fk_Notificacion_Usuario1');
+            $table->integer('Id_U_N')->index('fk_Notificacion_Usuario1');
             $table->integer('Id_RR_N')->index('fk_Notificacion_Reporte_Reserva1');
         });
     }

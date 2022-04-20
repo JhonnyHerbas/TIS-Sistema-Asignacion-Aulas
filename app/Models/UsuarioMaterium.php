@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * Class UsuarioMaterium
  * 
  * @property int $SisM_UM
- * @property string $Id_U_UM
+ * @property int $Id_U_UM
  * 
  * @property Materium $materium
  * @property Usuario $usuario
@@ -26,7 +26,8 @@ class UsuarioMaterium extends Model
 	public $timestamps = false;
 
 	protected $casts = [
-		'SisM_UM' => 'int'
+		'SisM_UM' => 'int',
+		'Id_U_UM' => 'int'
 	];
 
 	public function materium()

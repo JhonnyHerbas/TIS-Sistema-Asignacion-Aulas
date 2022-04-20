@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * Class Usuario
  * 
- * @property string $Id_U
+ * @property int $Id_U
  * @property string $Nomb_U
  * @property string $Cont_U
  * @property string|null $Corr_U
@@ -36,6 +36,7 @@ class Usuario extends Model
 	public $timestamps = false;
 
 	protected $casts = [
+		'Id_U' => 'int',
 		'Rol_U' => 'int'
 	];
 

@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $Nume_G
  * @property int $NumeEstuResg_G
  * @property int $SisM_M_G
- * @property string $Id_U_G
+ * @property int $Id_U_G
  * 
  * @property Materium $materium
  * @property Usuario $usuario
@@ -29,7 +29,8 @@ class Grupo extends Model
 
 	protected $casts = [
 		'NumeEstuResg_G' => 'int',
-		'SisM_M_G' => 'int'
+		'SisM_M_G' => 'int',
+		'Id_U_G' => 'int'
 	];
 
 	protected $fillable = [
